@@ -1,0 +1,7 @@
+spring:
+   datasource:
+      url: jdbc:postgresql://localhost:5432/guestlist
+      username: postgres
+      password: root
+      driver-class-name: org.postgresql.Driver
+      platform: org.hibernate.dialect.PostgreSQLDialect
