@@ -3,43 +3,43 @@
  xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>ListaVIP</title>
+    <title>Guest List</title>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <div id="listaDeConvidados">
+        <div id="guestList">
             <table class="table table-hover">
                 <thead>
                     <tr>
-                        <th>Nome</th>
+                        <th>Name</th>
                         <th>Email</th>
-                        <th>Nome</th>
+                        <th>Phone</th>
                     </tr>
                 </thead>
                 
-                <tr th:each="convidado : ${convidados}">
-	                <td>${convidado.nome}</td>
-                    <td>${convidado.email}</td>
-                    <td>${convidado.telefone}</td>
+                <tr th:each="guest : ${guests}">
+	                <td><span th:text="${guest.name}"></span></td>
+                    <td><span th:text="${guest.email}"</span></td>
+                    <td><span th:text="${guest.phone}"</span></td>
                 </tr>
             </table>
         </div>
         <hr>
-        <form action="convidado">
+        <form action="guest">
             <div class="form-group">
-                <label for="nome">Nome</label> <input type="text"
-                    class="form-control" id="nome" name="nome" placeholder="Nome">
+                <label for="name">Name</label> <input type="text"
+                    class="form-control" id="name" name="name" placeholder="Name">
             </div>
             <div class="form-group">
                 <label for="email">Email</label> <input type="email"
                     class="form-control" id="email" name="email" placeholder="Email">
             </div>
             <div class="form-group">
-                <label for="telefone">Telefone</label> <input
-                    type="text" class="form-control" id="telefone" name="telefone" placeholder="Telefone">
+                <label for="phone">Phone</label> <input
+                    type="text" class="form-control" id="phone" name="phone" placeholder="Phone">
             </div>
-            <button type="submit" class="btn btn-success">Convidar</button>
+            <button type="submit" class="btn btn-success">Guest</button>
         </form>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

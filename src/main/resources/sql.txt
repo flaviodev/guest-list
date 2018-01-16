@@ -1,0 +1,9 @@
+CREATE TABLE guest
+(
+    id    serial primary key,
+    name        VARCHAR(255) not null,
+    email       VARCHAR(100) not null,
+    phone       VARCHAR(12) 
+);
+
+INSERT INTO guest (name, email, phone) VALUES('Flavio', 'fdsdev@gmail.com','62 98483-8888');
