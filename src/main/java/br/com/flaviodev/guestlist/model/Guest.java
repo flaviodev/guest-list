@@ -2,18 +2,29 @@ package br.com.flaviodev.guestlist.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 
 @Entity(name = "guest")
 public class Guest {
 
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@SequenceGenerator(name = "guestSequence", sequenceName = "guest_id_seq")
 	private Long id;
 
 	private String name;
 	private String email;
 	private String phone;
+
+	public Guest() {}
+	
+	public Guest(String name, String email, String phone) {
+		this.name = name;
+		this.email = email;
+		this.phone = phone;
+	}
 
 	public Long getId() {
 		return id;
