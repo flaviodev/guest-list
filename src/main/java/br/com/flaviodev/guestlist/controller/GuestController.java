@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import br.com.flaviodev.EmailSender.services.EmailService;
+import br.com.flaviodev.emailsender.services.EmailService;
 import br.com.flaviodev.guestlist.model.Guest;
 import br.com.flaviodev.guestlist.services.GuestService;
 
