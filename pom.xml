@@ -80,7 +80,12 @@
 		    <groupId>br.com.flaviodev</groupId>
     		<artifactId>email-sender</artifactId>
 	    	<version>0.0.1-SNAPSHOT</version>
-		</dependency>				
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>						
 	</dependencies>
 
 	<build>
